@@ -47,7 +47,7 @@ _restore/
 _tmp_verify/
 *.tar.gz
 gradle_error.txt
-qrcode.png
+/qrcode.png
 haval-h6-hvac-research.md
 fork/
 haval-h6-hvac-research.md
