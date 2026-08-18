@@ -1,9 +1,10 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-    alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -15,8 +16,9 @@ android {
         minSdk = 28
         //noinspection ExpiredTargetSdkVersion
         targetSdk = 28
-        versionCode = 99
-        versionName = "99.99"
+        // Versão sobrescrita pelo build.yml (sed) no CI a partir da tag/auto-incremento.
+        versionCode = 1
+        versionName = "0.0.1"
     }
 
     signingConfigs {
@@ -57,12 +59,14 @@ kotlin {
 dependencies {
 
     implementation(libs.appcompat)
+    implementation(libs.core.ktx)
     implementation(libs.material)
     implementation(libs.shizuku)
     implementation(libs.shizuku.provider)
     implementation(libs.hiddenapibypass)
     implementation(libs.commons.net)
     implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.lifecycle.service)
     implementation(libs.activity.compose)
     implementation(platform(libs.compose.bom))
     implementation(libs.ui)
@@ -75,6 +79,7 @@ dependencies {
     implementation(libs.material.icons.extended)
     annotationProcessor(libs.annotation.processor)
     compileOnly(libs.annotation)
+    testImplementation(libs.junit)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
 }

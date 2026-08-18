@@ -47,6 +47,13 @@ public class ForegroundService extends Service implements Shizuku.OnBinderDeadLi
     private Boolean isShizukuInitialized = false;
     private Boolean isServiceRunning = false;
 
+    private final Runnable timeoutRunnable = () -> {
+        if (!isShizukuInitialized) {
+            Log.w(TAG, "Shizuku initialization timed out. Restarting service...");
+            restart();
+        }
+    };
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -58,6 +65,9 @@ public class ForegroundService extends Service implements Shizuku.OnBinderDeadLi
 
     @Override
     public synchronized int onStartCommand(Intent intent, int flags, int startId) {
+        var sharedPreferences = App.getDeviceProtectedContext().getSharedPreferences("haval_prefs", Context.MODE_PRIVATE);
+        
+
         if (isServiceRunning) {
             Log.w(TAG, "Service is already running, skipping start.");
             return START_STICKY; // Retorna imediatamente se o serviço já estiver rodando
@@ -65,6 +75,10 @@ public class ForegroundService extends Service implements Shizuku.OnBinderDeadLi
         try {
             isServiceRunning = true; // Marca o serviço como rodando
             Log.w(TAG, "Service started");
+            
+            // Clear any pending background tasks (retry loops) from previous starts
+            backgroundHandler.removeCallbacksAndMessages(null);
+            
             var context = getApplicationContext();
             // Criar notificação para o Foreground Service
             Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID).setContentTitle("Aplicação em execução").setContentText("Seu app está rodando em segundo plano").setSmallIcon(android.R.drawable.ic_notification_overlay) // Ícone de notificação
@@ -72,7 +86,37 @@ public class ForegroundService extends Service implements Shizuku.OnBinderDeadLi
 
             startForeground(NOTIFICATION_ID, notification);
 
-            var sharedPreferences = App.getDeviceProtectedContext().getSharedPreferences("haval_prefs", Context.MODE_PRIVATE);
+            // Start bottom bar as early as possible if enabled
+            if (sharedPreferences.getBoolean(SharedPreferencesKeys.PERSISTENT_BOTTOM_BAR.getKey(), false)) {
+                if (android.provider.Settings.canDrawOverlays(this)) {
+                    Log.w(TAG, "Starting persistent bottom bar...");
+                    Intent bottomBarIntent = new Intent(this, br.com.redesurftank.havalshisuku.services.BottomBarService.class);
+                    startService(bottomBarIntent);
+                } else {
+                    Log.e(TAG, "Overlay permission not granted, skipping persistent bottom bar.");
+                }
+            }
+
+            // Checar se precisa resetar dados (rollback preview→estável)
+            var pendingResetTarget = sharedPreferences.getString(SharedPreferencesKeys.PENDING_RESET_TARGET_VERSION.getKey(), "");
+            if (pendingResetTarget != null && !pendingResetTarget.isEmpty()) {
+                try {
+                    var currentVersion = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
+                    if (currentVersion != null && currentVersion.equals(pendingResetTarget)) {
+                        // Versão atual bate com o alvo — install deu certo, resetar dados
+                        Log.w(TAG, "Pending data reset confirmed (current=" + currentVersion + " matches target=" + pendingResetTarget + "), clearing all SharedPreferences...");
+                        sharedPreferences.edit().clear().apply();
+                        Log.w(TAG, "SharedPreferences cleared successfully, app will behave as first run.");
+                    } else {
+                        // Install falhou ou versão diferente — limpar a flag sem resetar dados
+                        Log.w(TAG, "Pending data reset skipped (current=" + currentVersion + " != target=" + pendingResetTarget + "), removing flag.");
+                        sharedPreferences.edit().remove(SharedPreferencesKeys.PENDING_RESET_TARGET_VERSION.getKey()).apply();
+                    }
+                } catch (Exception e) {
+                    Log.e(TAG, "Error checking pending data reset: " + e.getMessage(), e);
+                    sharedPreferences.edit().remove(SharedPreferencesKeys.PENDING_RESET_TARGET_VERSION.getKey()).apply();
+                }
+            }
 
             if (!sharedPreferences.getBoolean(SharedPreferencesKeys.SELF_INSTALLATION_INTEGRITY_CHECK.getKey(), false) && !sharedPreferences.getBoolean(SharedPreferencesKeys.BYPASS_SELF_INSTALLATION_INTEGRITY_CHECK.getKey(), false)) {
                 try {
@@ -91,21 +135,20 @@ public class ForegroundService extends Service implements Shizuku.OnBinderDeadLi
                 }
             }
 
-            var shizukuLibLocation = sharedPreferences.getString("shizuku_lib_location", "");
-
-            final Runnable timeoutRunnable = () -> {
-                if (!isShizukuInitialized) {
-                    Log.w(TAG, "Timeout waiting for Shizuku binder, restarting service...");
-                    restart();
-                }
-            };
 
             backgroundHandler.post(new Runnable() {
                 @Override
                 public void run() {
                     try {
+                        var sharedPreferences = App.getDeviceProtectedContext().getSharedPreferences("haval_prefs", Context.MODE_PRIVATE);
+                        String shizukuLibLocation = sharedPreferences.getString("shizuku_lib_location", "");
+                        
                         var telnetClient = new TelnetClientWrapper();
+                        
+                        
                         telnetClient.connect("127.0.0.1", 23);
+                        
+
                         String filePath = "";
                         if (shizukuLibLocation.isEmpty()) {
                             String findCommand = "find /data/app -name libshizuku.so";
@@ -186,7 +229,7 @@ public class ForegroundService extends Service implements Shizuku.OnBinderDeadLi
             return;
         }
 
-        Log.w(TAG, "Shizuku initialized and permission granted, starting services...");
+        Log.w(TAG, "Shizuku initialized/bypassed, starting services...");
 
         // Start SSH check and start in background with retry
         backgroundHandler.post(new Runnable() {
@@ -388,4 +431,5 @@ public class ForegroundService extends Service implements Shizuku.OnBinderDeadLi
         alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, triggerTime, pendingIntent);
         stopSelf();
     }
+
 }

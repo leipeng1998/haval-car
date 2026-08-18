@@ -16,8 +16,10 @@ import java.util.function.BiConsumer;
 
 import br.com.redesurftank.App;
 import br.com.redesurftank.havalshisuku.models.CarConstants;
+import br.com.redesurftank.havalshisuku.models.SharedPreferencesKeys;
 import br.com.redesurftank.havalshisuku.projectors.InstrumentProjector;
 import br.com.redesurftank.havalshisuku.projectors.InstrumentProjector2;
+import br.com.redesurftank.havalshisuku.managers.DisplayAppLauncher;
 
 public class ProjectorManager {
     private static final String TAG = "ProjectorManager";
@@ -41,17 +43,23 @@ public class ProjectorManager {
     private ProjectorManager() {
         sharedPreferences = App.getDeviceProtectedContext().getSharedPreferences("haval_prefs", Context.MODE_PRIVATE);
 
-        projectorCreators.put(1, (ctx, disp) -> {
+        int maskDisplayId = 3;
+        int hudDisplayId = 1;
+
+        projectorCreators.put(maskDisplayId, (ctx, disp) -> {
             instrumentProjector2 = new InstrumentProjector2(ctx, disp);
             instrumentProjector2.show();
-            Log.w(TAG, "InstrumentProjector2 initialized and displayed successfully");
+            Log.w(TAG, "InstrumentProjector2 (Mask) initialized on Display " + disp.getDisplayId());
         });
 
-        projectorCreators.put(3, (ctx, disp) -> {
+        /* [DEPRECATED] Moved InstrumentProjector to Display 1 (HUD) as intended
+           Disabled to save resources as logic moved to WebView.
+        projectorCreators.put(hudDisplayId, (ctx, disp) -> {
             instrumentProjector = new InstrumentProjector(ctx, disp);
             instrumentProjector.show();
-            Log.w(TAG, "HudProjector initialized and displayed successfully");
+            Log.w(TAG, "InstrumentProjector (HUD) initialized on Display " + disp.getDisplayId());
         });
+        */
     }
 
     public void initialize() {
@@ -79,12 +87,27 @@ public class ProjectorManager {
 
             ServiceManager.getInstance().addDataChangedListener((key, value) -> {
                 if (key.equals(CarConstants.CAR_BASIC_ENGINE_STATE.getValue())) {
-                    if (value.equals("-1") || value.equals("15")) {
+                    if ("-1".equals(value) || "15".equals(value) || "14".equals(value) || "10".equals(value)) {
                         if (instrumentProjector != null) {
                             instrumentProjector.carMainScreenOff();
                         }
                         if (instrumentProjector2 != null) {
                             instrumentProjector2.carMainScreenOff();
+                        }
+                        
+                        // Kill all apps on display 1 and 3
+                        java.util.List<br.com.redesurftank.havalshisuku.models.DisplayAppConfig> configs = DisplayAppLauncher.INSTANCE.getAllConfigs();
+                        for (br.com.redesurftank.havalshisuku.models.DisplayAppConfig config : configs) {
+                             DisplayAppLauncher.TaskInfo task = DisplayAppLauncher.INSTANCE.findTaskForPackage(config.getPackageName());
+                             if (task != null && (task.getDisplayId() == 1 || task.getDisplayId() == 3)) {
+                                 Log.w(TAG, "Shutting down: killing app " + config.getPackageName() + " on display " + task.getDisplayId());
+                                 DisplayAppLauncher.killAppAsync(config.getPackageName());
+                             }
+                        }
+
+                        String defaultPackage = sharedPreferences.getString(SharedPreferencesKeys.DEFAULT_DISPLAY_APP_PACKAGE.getKey(), "");
+                        if (!defaultPackage.isEmpty()) {
+                            DisplayAppLauncher.killAppAsync(defaultPackage);
                         }
                     } else {
                         if (instrumentProjector != null) {
@@ -100,6 +123,52 @@ public class ProjectorManager {
         } catch (Exception e) {
             Log.e(TAG, "Failed to initialize ProjectorManager", e);
         }
+    }
+
+    public void stopProjectors() {
+        Log.w(TAG, "Stopping all projectors");
+        if (instrumentProjector != null) {
+            try {
+                instrumentProjector.dismiss();
+            } catch (Exception e) {
+                Log.e(TAG, "Error dismissing instrumentProjector", e);
+            }
+            instrumentProjector = null;
+        }
+        if (instrumentProjector2 != null) {
+            try {
+                instrumentProjector2.dismiss();
+            } catch (Exception e) {
+                Log.e(TAG, "Error dismissing instrumentProjector2", e);
+            }
+            instrumentProjector2 = null;
+        }
+        projectorCreators.clear();
+    }
+
+    public void refresh() {
+        Log.w(TAG, "Refreshing ProjectorManager");
+        stopProjectors();
+        
+        // Re-read preferences and re-populate creators
+        int maskDisplayId = 3;
+        int hudDisplayId = 1;
+
+        projectorCreators.put(maskDisplayId, (ctx, disp) -> {
+            instrumentProjector2 = new InstrumentProjector2(ctx, disp);
+            instrumentProjector2.show();
+            Log.w(TAG, "InstrumentProjector2 (Mask) refreshed on Display " + disp.getDisplayId());
+        });
+
+        /* Disabled to save resources as logic moved to WebView.
+        projectorCreators.put(hudDisplayId, (ctx, disp) -> {
+            instrumentProjector = new InstrumentProjector(ctx, disp);
+            instrumentProjector.show();
+            Log.w(TAG, "InstrumentProjector (HUD) refreshed on Display " + disp.getDisplayId());
+        });
+        */
+
+        initialize();
     }
 
     private Display getDisplayById(int id) {

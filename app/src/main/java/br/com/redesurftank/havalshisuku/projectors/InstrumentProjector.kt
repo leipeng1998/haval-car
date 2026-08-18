@@ -83,6 +83,10 @@ class InstrumentProjector(outerContext: Context, display: Display) : BaseProject
     }
 
     private fun updateView() {
+        // [DEPRECATED] Maintenance and revision information has been migrated to the WebView-based 
+        // instrument cluster (InstrumentProjector2.kt). This logic is kept for reference only.
+        if (true) return 
+
         val enableWarning = preferences.getBoolean(SharedPreferencesKeys.ENABLE_INSTRUMENT_REVISION_WARNING.key, false)
         if (!enableWarning) {
             maintenanceTextView?.let {
@@ -98,7 +102,7 @@ class InstrumentProjector(outerContext: Context, display: Display) : BaseProject
         val remainingKm = nextKm - currentKm
 
         val nextDateMillis = preferences.getLong(SharedPreferencesKeys.INSTRUMENT_REVISION_NEXT_DATE.key, 0L)
-        var text = "Próxima Manutenção em: $remainingKm Km"
+        var text = "下次保养：$remainingKm Km"
         var shouldBlink = remainingKm < 1000
 
         if (nextDateMillis > 0) {
@@ -141,9 +145,10 @@ class InstrumentProjector(outerContext: Context, display: Display) : BaseProject
         }
     }
 
-    override fun onDataChanged(key: String, value: String) {
+    override fun onDataChanged(key: String, value: String?) {
+        if (value == null) return
         if (key == CarConstants.CAR_BASIC_TOTAL_ODOMETER.value) {
-            currentKm = value.toInt()
+            currentKm = value.toIntOrNull() ?: currentKm
         }
     }
 

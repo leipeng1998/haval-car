@@ -1,0 +1,1886 @@
+{
+  "exact": [
+    {
+      "source": "Configurações",
+      "translation": "设置"
+    },
+    {
+      "source": "Telas",
+      "translation": "空调仪表"
+    },
+    {
+      "source": "Valores Atuais",
+      "translation": "实时数值"
+    },
+    {
+      "source": "Instalar Apps",
+      "translation": "安装应用"
+    },
+    {
+      "source": "Recursos",
+      "translation": "功能中心"
+    },
+    {
+      "source": "Informações",
+      "translation": "关于"
+    },
+    {
+      "source": "Frida Hooks",
+      "translation": "Frida 调试"
+    },
+    {
+      "source": "Cancelar",
+      "translation": "取消"
+    },
+    {
+      "source": "Fechar",
+      "translation": "关闭"
+    },
+    {
+      "source": "Salvar",
+      "translation": "保存"
+    },
+    {
+      "source": "Atualizar",
+      "translation": "更新"
+    },
+    {
+      "source": "Baixar",
+      "translation": "下载"
+    },
+    {
+      "source": "Excluir",
+      "translation": "删除"
+    },
+    {
+      "source": "Adicionar",
+      "translation": "添加"
+    },
+    {
+      "source": "Adicionar App",
+      "translation": "添加应用"
+    },
+    {
+      "source": "Editar App",
+      "translation": "编辑应用"
+    },
+    {
+      "source": "Editar",
+      "translation": "编辑"
+    },
+    {
+      "source": "Renomear",
+      "translation": "重命名"
+    },
+    {
+      "source": "Remover",
+      "translation": "移除"
+    },
+    {
+      "source": "Resetar",
+      "translation": "重置"
+    },
+    {
+      "source": "Resetar para o padrão",
+      "translation": "恢复默认"
+    },
+    {
+      "source": "Voltar",
+      "translation": "返回"
+    },
+    {
+      "source": "Continuar",
+      "translation": "继续"
+    },
+    {
+      "source": "Confirmar",
+      "translation": "确认"
+    },
+    {
+      "source": "Confirmação",
+      "translation": "确认"
+    },
+    {
+      "source": "OK",
+      "translation": "确定"
+    },
+    {
+      "source": "Sim",
+      "translation": "是"
+    },
+    {
+      "source": "Não",
+      "translation": "否"
+    },
+    {
+      "source": "Ativar",
+      "translation": "启用"
+    },
+    {
+      "source": "Selecionado",
+      "translation": "已选择"
+    },
+    {
+      "source": "Instalar",
+      "translation": "安装"
+    },
+    {
+      "source": "Instalado",
+      "translation": "已安装"
+    },
+    {
+      "source": "Desinstalar",
+      "translation": "卸载"
+    },
+    {
+      "source": "Enviar",
+      "translation": "发送"
+    },
+    {
+      "source": "Erro",
+      "translation": "错误"
+    },
+    {
+      "source": "Erro desconhecido",
+      "translation": "未知错误"
+    },
+    {
+      "source": "Buscar...",
+      "translation": "搜索…"
+    },
+    {
+      "source": "Buscar Atualizações",
+      "translation": "检查更新"
+    },
+    {
+      "source": "Atualizações",
+      "translation": "更新"
+    },
+    {
+      "source": "Aplicativo",
+      "translation": "应用"
+    },
+    {
+      "source": "Aplicativos",
+      "translation": "应用"
+    },
+    {
+      "source": "Apps",
+      "translation": "应用"
+    },
+    {
+      "source": "Aplicativos disponíveis:",
+      "translation": "可用应用："
+    },
+    {
+      "source": "App Padrão",
+      "translation": "默认应用"
+    },
+    {
+      "source": "App Padrão do Cluster",
+      "translation": "仪表默认应用"
+    },
+    {
+      "source": "Selecione o app que abrirá automaticamente quando o cluster carregar",
+      "translation": "选择仪表启动时自动打开的应用"
+    },
+    {
+      "source": "Nome do App (ex: YouTube)",
+      "translation": "应用名称（如：YouTube）"
+    },
+    {
+      "source": "Pacote (ex: com.google.android.youtube)",
+      "translation": "包名（如：com.google.android.youtube）"
+    },
+    {
+      "source": "Pacote do App",
+      "translation": "应用包名"
+    },
+    {
+      "source": "Atividade (opcional)",
+      "translation": "Activity（可选）"
+    },
+    {
+      "source": "Ícone Substituto",
+      "translation": "替代图标"
+    },
+    {
+      "source": "Nome Customizado",
+      "translation": "自定义名称"
+    },
+    {
+      "source": "Defina um nome customizado para este atalho:",
+      "translation": "为此快捷方式设置自定义名称："
+    },
+    {
+      "source": "Apps em Telas Secundárias",
+      "translation": "副屏应用"
+    },
+    {
+      "source": "Nenhum app configurado.\\nClique em \\\"Adicionar\\\" para configurar um app para exibir em outra tela.",
+      "translation": "尚未配置应用。\\n点击“添加”配置要在另一屏幕显示的应用。"
+    },
+    {
+      "source": "Tela de destino",
+      "translation": "目标屏幕"
+    },
+    {
+      "source": "Selecionar Aplicativo",
+      "translation": "选择应用"
+    },
+    {
+      "source": "Display ${config.displayId}",
+      "translation": "屏幕 ${config.displayId}"
+    },
+    {
+      "source": "Posição X",
+      "translation": "X 坐标"
+    },
+    {
+      "source": "Posição Y",
+      "translation": "Y 坐标"
+    },
+    {
+      "source": "Largura",
+      "translation": "宽度"
+    },
+    {
+      "source": "Altura",
+      "translation": "高度"
+    },
+    {
+      "source": "Resolução: ${resolution.first} x ${resolution.second} | Pos: $posX,$posY",
+      "translation": "分辨率：${resolution.first} x ${resolution.second}｜位置：$posX,$posY"
+    },
+    {
+      "source": "Pos: ${config.x},${config.y} | Tam: ${config.width}x${config.height}",
+      "translation": "位置：${config.x},${config.y}｜尺寸：${config.width}x${config.height}"
+    },
+    {
+      "source": "Abrir Configurações do Android",
+      "translation": "打开 Android 设置"
+    },
+    {
+      "source": "Ajustes",
+      "translation": "系统设置"
+    },
+    {
+      "source": "Mapa",
+      "translation": "地图"
+    },
+    {
+      "source": "Música",
+      "translation": "音乐"
+    },
+    {
+      "source": "Vídeo",
+      "translation": "视频"
+    },
+    {
+      "source": "Carro",
+      "translation": "车辆"
+    },
+    {
+      "source": "Jogo",
+      "translation": "游戏"
+    },
+    {
+      "source": "TV",
+      "translation": "电视"
+    },
+    {
+      "source": "Telefone",
+      "translation": "电话"
+    },
+    {
+      "source": "Conversa",
+      "translation": "聊天"
+    },
+    {
+      "source": "Explorar",
+      "translation": "探索"
+    },
+    {
+      "source": "Jogo",
+      "translation": "游戏"
+    },
+    {
+      "source": "Vídeo",
+      "translation": "视频"
+    },
+    {
+      "source": "Habilitar Funções do Cluster",
+      "translation": "启用仪表功能"
+    },
+    {
+      "source": "Habilitar projeção, integração de mídia e menu customizado",
+      "translation": "启用数据投影、媒体整合与自定义菜单"
+    },
+    {
+      "source": "Erro ao atualizar funções do cluster: ${e.message}",
+      "translation": "更新仪表功能失败：${e.message}"
+    },
+    {
+      "source": "Exemplo de Funções do Cluster",
+      "translation": "仪表功能示例"
+    },
+    {
+      "source": "Virtual Cluster",
+      "translation": "虚拟仪表（空调控制）"
+    },
+    {
+      "source": "Exemplo do Virtual Cluster",
+      "translation": "虚拟仪表示例"
+    },
+    {
+      "source": "Dimensões do Tema",
+      "translation": "主题尺寸"
+    },
+    {
+      "source": "Sempre usar dimensões do tema para apps",
+      "translation": "应用始终使用主题尺寸"
+    },
+    {
+      "source": "Personalizações",
+      "translation": "个性化"
+    },
+    {
+      "source": "Ajustes visuais usados no cluster quando as funções estão habilitadas",
+      "translation": "仪表功能启用时使用的视觉设置"
+    },
+    {
+      "source": "Exibição do combustível",
+      "translation": "燃油显示单位"
+    },
+    {
+      "source": "Litros",
+      "translation": "升"
+    },
+    {
+      "source": "Percentual",
+      "translation": "百分比"
+    },
+    {
+      "source": "Exibir Odômetro e Aviso de Revisão",
+      "translation": "显示里程与保养提醒"
+    },
+    {
+      "source": "Temas Disponíveis",
+      "translation": "可用主题"
+    },
+    {
+      "source": "Personalize seu cluster com novos visuais",
+      "translation": "用新主题个性化你的仪表"
+    },
+    {
+      "source": "Tema principal com o novo design Sport.",
+      "translation": "带全新 Sport 风格的主主题。"
+    },
+    {
+      "source": "Tema ${theme.name} aplicado!",
+      "translation": "主题 ${theme.name} 已应用！"
+    },
+    {
+      "source": "Tema ${theme.name} atualizado!",
+      "translation": "主题 ${theme.name} 已更新！"
+    },
+    {
+      "source": "Tema ${theme.name} excluído!",
+      "translation": "主题 ${theme.name} 已删除！"
+    },
+    {
+      "source": "Tema ${theme.name} instalado! Clique para aplicar.",
+      "translation": "主题 ${theme.name} 已安装！点击应用。"
+    },
+    {
+      "source": "Erro ao atualizar tema ${theme.name}",
+      "translation": "更新主题 ${theme.name} 失败"
+    },
+    {
+      "source": "Erro ao baixar tema ${theme.name}",
+      "translation": "下载主题 ${theme.name} 失败"
+    },
+    {
+      "source": "Nenhum tema encontrado ou erro ao carregar.",
+      "translation": "未找到主题或加载失败。"
+    },
+    {
+      "source": "Padrão",
+      "translation": "默认"
+    },
+    {
+      "source": "Arraste e solte para instalar",
+      "translation": "拖动主题文件到此处安装"
+    },
+    {
+      "source": "Ajusta a velocidade exibida no painel (Virtual Cluster)",
+      "translation": "校准虚拟仪表上显示的车速"
+    },
+    {
+      "source": "Ajuste de velocidade",
+      "translation": "车速校准"
+    },
+    {
+      "source": "Velocidade: $speedThreshold km/h",
+      "translation": "速度阈值：$speedThreshold km/h"
+    },
+    {
+      "source": "Velocidade: ${closeSunroofSpeedThreshold.toInt()} km/h",
+      "translation": "速度阈值：${closeSunroofSpeedThreshold.toInt()} km/h"
+    },
+    {
+      "source": "Bypass de Verificação",
+      "translation": "跳过完整性校验"
+    },
+    {
+      "source": "Desativar navegador GPS nativo",
+      "translation": "禁用原厂导航"
+    },
+    {
+      "source": "Desativar assistente de voz nativo",
+      "translation": "禁用原厂语音助手"
+    },
+    {
+      "source": "Desativar previsão do tempo nativa",
+      "translation": "禁用原厂天气预报"
+    },
+    {
+      "source": "Desativa o navegador Neusoft (OEM) que roda em segundo plano e consome RAM/CPU. Reversível.",
+      "translation": "禁用后台常驻的原厂 Neusoft 导航（占用内存/CPU），可逆。"
+    },
+    {
+      "source": "Desativa o assistente de voz iFlyTek (OEM) que roda em segundo plano e consome RAM/CPU. Reversível.",
+      "translation": "禁用后台常驻的原厂 iFlyTek 语音助手（占用内存/CPU），可逆。"
+    },
+    {
+      "source": "Desativa o serviço de previsão do tempo (OEM) que roda em segundo plano. Reversível.",
+      "translation": "禁用后台常驻的原厂天气预报服务，可逆。"
+    },
+    {
+      "source": "Fechar janela ao desligar o veículo",
+      "translation": "熄火时关闭车窗"
+    },
+    {
+      "source": "Fechar janela ao recolher retrovisores",
+      "translation": "收起后视镜时关闭车窗"
+    },
+    {
+      "source": "Fechar teto solar ao desligar",
+      "translation": "熄火时关闭天窗"
+    },
+    {
+      "source": "Fechar teto solar ao desligar o veículo",
+      "translation": "熄火时关闭天窗"
+    },
+    {
+      "source": "Fechar teto solar ao recolher retrovisores",
+      "translation": "收起后视镜时关闭天窗"
+    },
+    {
+      "source": "Fechar cortina do teto solar",
+      "translation": "关闭天窗遮阳帘"
+    },
+    {
+      "source": "Fechar janelas com velocidade",
+      "translation": "高速时自动关窗"
+    },
+    {
+      "source": "Fechar teto solar com velocidade",
+      "translation": "高速时自动关天窗"
+    },
+    {
+      "source": "Fecha automaticamente as janelas quando o motor é desligado",
+      "translation": "发动机熄火时自动关闭车窗"
+    },
+    {
+      "source": "Sincroniza fechamento das janelas com o recolhimento dos retrovisores",
+      "translation": "收起后视镜时同步关闭车窗"
+    },
+    {
+      "source": "Desliga câmera de visão 360° quando o veículo está parado",
+      "translation": "车辆静止时自动关闭 360° 全景影像"
+    },
+    {
+      "source": "Desligar bluetooth ao desligar",
+      "translation": "熄火后关闭蓝牙"
+    },
+    {
+      "source": "Desligar ponto de acesso ao desligar",
+      "translation": "熄火后关闭热点"
+    },
+    {
+      "source": "Habilitar botões personalizados no volante",
+      "translation": "启用方向盘自定义按键"
+    },
+    {
+      "source": "Toque curto",
+      "translation": "短按"
+    },
+    {
+      "source": "Toque duplo",
+      "translation": "双击"
+    },
+    {
+      "source": "Toque longo",
+      "translation": "长按"
+    },
+    {
+      "source": "Ajustar brilho automaticamente",
+      "translation": "自动调节亮度"
+    },
+    {
+      "source": "Ajusta o brilho da tela automaticamente",
+      "translation": "根据白天/夜晚自动调节屏幕亮度"
+    },
+    {
+      "source": "Definir volume inicial",
+      "translation": "设置开机音量"
+    },
+    {
+      "source": "Volume: $volume",
+      "translation": "音量：$volume"
+    },
+    {
+      "source": "A/C no máximo ao ligar o carro",
+      "translation": "车内温度过高时自动开启 Max AC"
+    },
+    {
+      "source": "Manter desativado monitoramento de distrações",
+      "translation": "保持禁用分心驾驶监控"
+    },
+    {
+      "source": "Desabilita alertas de distração durante a condução",
+      "translation": "关闭行车途中的分心提醒"
+    },
+    {
+      "source": "Desativar AVAS",
+      "translation": "禁用 AVAS"
+    },
+    {
+      "source": "Sistema de alerta de veículo silencioso",
+      "translation": "低速车辆警示音系统"
+    },
+    {
+      "source": "Desativar câmera AVM quando parado",
+      "translation": "车辆静止时关闭 AVM"
+    },
+    {
+      "source": "Ligar ventilação do banco do motorisca com A/C ligado",
+      "translation": "开启空调时联动驾驶员座椅通风"
+    },
+    {
+      "source": "Habilitar barra inferior de rápido acesso",
+      "translation": "启用底部快捷栏"
+    },
+    {
+      "source": "Cria uma barra inferior fixa com atalhos para ar condicionado e outras funções",
+      "translation": "创建固定底部快捷栏，包含空调与常用功能入口"
+    },
+    {
+      "source": "Auto-ocultar barra",
+      "translation": "自动隐藏底栏"
+    },
+    {
+      "source": "Esconde após 30s de inatividade",
+      "translation": "30 秒无操作后隐藏"
+    },
+    {
+      "source": "Comando do ar-condicionado",
+      "translation": "空调指令"
+    },
+    {
+      "source": "Habilitar Frida Hooks",
+      "translation": "启用 Frida 钩子"
+    },
+    {
+      "source": "Hook System Server",
+      "translation": "钩住 System Server"
+    },
+    {
+      "source": "Injetar Código Manual",
+      "translation": "手动注入代码"
+    },
+    {
+      "source": "Hooks Manuais",
+      "translation": "手动钩子"
+    },
+    {
+      "source": "Injetar",
+      "translation": "注入"
+    },
+    {
+      "source": "Ativar scripts fridas é uma função experimental que pode causar instabilidades, utilize por conta e risco. Caso não saiba o que é essa função é melhor manter desativada",
+      "translation": "启用 Frida 脚本属于实验功能，可能造成系统不稳定，请自行承担风险。如果不了解该功能，建议保持关闭。"
+    },
+    {
+      "source": "Quer ativar o uso avançado? Pode causar instabilidades, utilize por conta e risco.",
+      "translation": "要启用高级模式吗？可能导致系统不稳定，请自行承担风险。"
+    },
+    {
+      "source": "Configurar",
+      "translation": "配置"
+    },
+    {
+      "source": "Configurar Monitoramento",
+      "translation": "配置监控"
+    },
+    {
+      "source": "Pesquisar valores",
+      "translation": "搜索数值"
+    },
+    {
+      "source": "Pesquisar constantes",
+      "translation": "搜索常量"
+    },
+    {
+      "source": "Novo valor",
+      "translation": "新值"
+    },
+    {
+      "source": "Atualizar $selectedKey",
+      "translation": "更新 $selectedKey"
+    },
+    {
+      "source": "Kilometragem Atual",
+      "translation": "当前里程"
+    },
+    {
+      "source": "Próxima Revisão",
+      "translation": "下次保养"
+    },
+    {
+      "source": "Registrar Revisão",
+      "translation": "登记保养"
+    },
+    {
+      "source": "Registrar Revisão/Data de Compra",
+      "translation": "登记保养/购车日期"
+    },
+    {
+      "source": "Registrar Compra ou Revisão",
+      "translation": "登记购车或保养"
+    },
+    {
+      "source": "Data da Revisão",
+      "translation": "保养日期"
+    },
+    {
+      "source": "Data da Compra",
+      "translation": "购车日期"
+    },
+    {
+      "source": "Data de Compra",
+      "translation": "购车日期"
+    },
+    {
+      "source": "Nenhuma revisão registrada",
+      "translation": "暂无保养记录"
+    },
+    {
+      "source": "Informe os dados da revisão atual para calcular a próxima automaticamente.",
+      "translation": "填写本次保养信息，自动计算下次保养日期。"
+    },
+    {
+      "source": "Informe os dados da revisão atual para calcular a próxima automaticamente. Caso deseje registrar a data da compra, insira a km como zero (0).",
+      "translation": "填写本次保养信息以自动推算下次保养。若要登记购车日期，请把里程填为 0。"
+    },
+    {
+      "source": "N/D - Cadastrar revisão ou data de compra do veículo caso deseje mostrar a próxima data de revisão no painel",
+      "translation": "面板上显示下次保养需先登记保养或购车日期"
+    },
+    {
+      "source": "Total do veículo e acompanhamento de próxima revisão no painel (o aviso de revisão permanece apenas por alguns segundos)",
+      "translation": "面板显示车辆总里程并跟踪下次保养（保养提醒仅显示数秒）"
+    },
+    {
+      "source": "Histórico (${revisionHistory.size})",
+      "translation": "历史记录（${revisionHistory.size}）"
+    },
+    {
+      "source": "URL do APK",
+      "translation": "APK 下载地址"
+    },
+    {
+      "source": "Instalar via URL",
+      "translation": "从网址安装"
+    },
+    {
+      "source": "Permissão necessária",
+      "translation": "需要权限"
+    },
+    {
+      "source": "Permita a instalação de apps de fontes desconhecidas.",
+      "translation": "请允许安装未知来源应用。"
+    },
+    {
+      "source": "Estado:",
+      "translation": "状态："
+    },
+    {
+      "source": "Status do Sistema",
+      "translation": "系统状态"
+    },
+    {
+      "source": "Verificação de Atualização",
+      "translation": "更新检查"
+    },
+    {
+      "source": "Verificando atualizações...",
+      "translation": "正在检查更新…"
+    },
+    {
+      "source": "Buscando versões disponíveis...",
+      "translation": "正在获取可用版本…"
+    },
+    {
+      "source": "Instalar Beta",
+      "translation": "安装测试版"
+    },
+    {
+      "source": "Voltar para Estável",
+      "translation": "返回稳定版"
+    },
+    {
+      "source": "Voltar para versão estável",
+      "translation": "返回稳定版"
+    },
+    {
+      "source": "Voltar para versão estável (v$stableVersionName)",
+      "translation": "返回稳定版（v$stableVersionName）"
+    },
+    {
+      "source": "Baixando atualização",
+      "translation": "正在下载更新"
+    },
+    {
+      "source": "Erro no download",
+      "translation": "下载失败"
+    },
+    {
+      "source": "Download failed",
+      "translation": "下载失败"
+    },
+    {
+      "source": "Estável",
+      "translation": "稳定版"
+    },
+    {
+      "source": "Beta",
+      "translation": "测试版"
+    },
+    {
+      "source": "Estável: ${result.latestRelease!!.tag}",
+      "translation": "稳定版：${result.latestRelease!!.tag}"
+    },
+    {
+      "source": "Beta: ${result.latestPreview!!.tag}",
+      "translation": "测试版：${result.latestPreview!!.tag}"
+    },
+    {
+      "source": "Nova versão: ${result.latestRelease.tag}",
+      "translation": "新版本：${result.latestRelease.tag}"
+    },
+    {
+      "source": "Nova beta: ${result.latestPreview!!.tag}",
+      "translation": "新测试版：${result.latestPreview!!.tag}"
+    },
+    {
+      "source": "Canal atual: $currentChannel ($version)",
+      "translation": "当前通道：$currentChannel ($version)"
+    },
+    {
+      "source": "Mostrar versões Beta",
+      "translation": "显示测试版"
+    },
+    {
+      "source": "Versão",
+      "translation": "版本"
+    },
+    {
+      "source": "Versão Estável",
+      "translation": "稳定版本"
+    },
+    {
+      "source": "Versão experimental. Pode conter bugs e instabilidades.",
+      "translation": "实验版本，可能包含缺陷或系统不稳定。"
+    },
+    {
+      "source": "Versões beta são para entusiastas e usuários com conhecimento técnico. Podem conter bugs, instabilidades e funcionalidades incompletas. Use por sua conta e risco.",
+      "translation": "测试版面向发烧友和技术型用户，可能包含缺陷、不稳定或不完整功能，请自行承担风险。"
+    },
+    {
+      "source": "Você está na versão mais recente",
+      "translation": "当前已是最新版本"
+    },
+    {
+      "source": "Você já está na versão estável.",
+      "translation": "当前已是稳定版。"
+    },
+    {
+      "source": "Instalado corretamente:",
+      "translation": "安装成功："
+    },
+    {
+      "source": "Inst: v${installedVersion}",
+      "translation": "已装版本：v${installedVersion}"
+    },
+    {
+      "source": "Reinstalar versão estável",
+      "translation": "重装稳定版"
+    },
+    {
+      "source": "Reinstala a versão estável de referência (v$stableVersionName). ",
+      "translation": "重新安装参考稳定版（v$stableVersionName）。"
+    },
+    {
+      "source": "Será baixada e instalada a versão estável v$stableVersionName.\\n\\n",
+      "translation": "将下载并安装稳定版 v$stableVersionName。\\n\\n"
+    },
+    {
+      "source": "Use para voltar a uma base confiável caso uma versão mais nova apresente problemas.",
+      "translation": "若新版本出现问题，可用它回到可靠的基础版本。"
+    },
+    {
+      "source": "Falha ao reinstalar a versão estável.",
+      "translation": "重装稳定版失败。"
+    },
+    {
+      "source": "Os dados do app serão resetados ao voltar para estável.",
+      "translation": "返回稳定版时应用数据会被重置。"
+    },
+    {
+      "source": "Os dados e configurações do app serão resetados (a instalação pode ser um downgrade).",
+      "translation": "返回后应用数据与设置将被重置（安装版本可能更旧）。"
+    },
+    {
+      "source": "Requer o Shizuku ativo. Deseja continuar?",
+      "translation": "需要 Shizuku 已授权，是否继续？"
+    },
+    {
+      "source": "Verifique se o Shizuku está ativo (Estado: Ativo).",
+      "translation": "请确认 Shizuku 已授权（状态：已启用）。"
+    },
+    {
+      "source": "Contribua para o Desenvolvimento",
+      "translation": "支持项目开发"
+    },
+    {
+      "source": "QR Code para contribuição",
+      "translation": "捐赠二维码"
+    },
+    {
+      "source": "Ajude a manter este projeto ativo! Sua contribuição é muito importante para o desenvolvimento contínuo do app.",
+      "translation": "支持本项目的持续开发！你的贡献对应用后续维护非常重要。"
+    },
+    {
+      "source": "Escaneie o QR Code ou use a chave PIX: joaovitorbor@gmail.com",
+      "translation": "扫描二维码或使用 PIX 捐赠：joaovitorbor@gmail.com"
+    },
+    {
+      "source": "Obrigado pelo seu apoio! 🙏",
+      "translation": "感谢你的支持！🙏"
+    },
+    {
+      "source": "Automático",
+      "translation": "自动"
+    },
+    {
+      "source": "Ligar/desligar ar-condicionado",
+      "translation": "开关空调"
+    },
+    {
+      "source": "Ventilação para o vidro (desembaçar)",
+      "translation": "前挡除雾送风"
+    },
+    {
+      "source": "Temperatura alvo: ${maxAcTargetTemp.toInt()}°C",
+      "translation": "目标温度：${maxAcTargetTemp.toInt()}°C"
+    },
+    {
+      "source": "Temperatura de disparo: ${maxAcOnUnlockThreshold.toInt()}°C",
+      "translation": "触发温度：${maxAcOnUnlockThreshold.toInt()}°C"
+    },
+    {
+      "source": "Temp. Máxima:",
+      "translation": "最高温度："
+    },
+    {
+      "source": "1 minuto",
+      "translation": "1 分钟"
+    },
+    {
+      "source": "3 minutos",
+      "translation": "3 分钟"
+    },
+    {
+      "source": "5 minutos",
+      "translation": "5 分钟"
+    },
+    {
+      "source": "Sem limite",
+      "translation": "不限时"
+    },
+    {
+      "source": "Cor de Destaque",
+      "translation": "强调色"
+    },
+    {
+      "source": "MANUAL",
+      "translation": "手动"
+    },
+    {
+      "source": "Configurações do Carro",
+      "translation": "车辆设置"
+    },
+    {
+      "source": "Conforto",
+      "translation": "舒适"
+    },
+    {
+      "source": "Ventilação",
+      "translation": "通风"
+    },
+    {
+      "source": "Volume",
+      "translation": "音量"
+    },
+    {
+      "source": "Modo de Condução",
+      "translation": "驾驶模式"
+    },
+    {
+      "source": "Modo de Direção",
+      "translation": "驾驶模式"
+    },
+    {
+      "source": "Modo de Regeneração",
+      "translation": "能量回收模式"
+    },
+    {
+      "source": "Modo EV",
+      "translation": "EV 模式"
+    },
+    {
+      "source": "EV Prioritário",
+      "translation": "优先 EV"
+    },
+    {
+      "source": "HEV",
+      "translation": "HEV"
+    },
+    {
+      "source": "Motorista",
+      "translation": "驾驶员"
+    },
+    {
+      "source": "Passageiro",
+      "translation": "乘客"
+    },
+    {
+      "source": "Alto",
+      "translation": "高"
+    },
+    {
+      "source": "Baixo",
+      "translation": "低"
+    },
+    {
+      "source": "Esportiva",
+      "translation": "运动"
+    },
+    {
+      "source": "Areia",
+      "translation": "沙地"
+    },
+    {
+      "source": "Lama",
+      "translation": "泥地"
+    },
+    {
+      "source": "Neve",
+      "translation": "雪地"
+    },
+    {
+      "source": "Cluster",
+      "translation": "仪表"
+    },
+    {
+      "source": "MMI",
+      "translation": "中控"
+    },
+    {
+      "source": "Sync",
+      "translation": "同步"
+    },
+    {
+      "source": "Offset (Move a barra para baixo)",
+      "translation": "偏移（将底栏下移）"
+    },
+    {
+      "source": "Overscan (Value: ${overscanValues[overscanIndex]})",
+      "translation": "底部留白（值：${overscanValues[overscanIndex]}）"
+    },
+    {
+      "source": "Por favor, habilite a permissão de sobreposição para a barra inferior",
+      "translation": "请为底部快捷栏开启悬浮窗权限"
+    },
+    {
+      "source": "Matar",
+      "translation": "结束"
+    },
+    {
+      "source": "Início",
+      "translation": "开始"
+    },
+    {
+      "source": "Fim",
+      "translation": "结束"
+    },
+    {
+      "source": "Início da noite",
+      "translation": "夜晚开始"
+    },
+    {
+      "source": "Fim da noite",
+      "translation": "夜晚结束"
+    },
+    {
+      "source": "Inicialização:",
+      "translation": "初始化："
+    },
+    {
+      "source": "Início:",
+      "translation": "开始："
+    },
+    {
+      "source": "Fim:",
+      "translation": "结束："
+    },
+    {
+      "source": "Nível de brilho diurno: $dayBrightnessLevel",
+      "translation": "白天亮度：$dayBrightnessLevel"
+    },
+    {
+      "source": "Nível de brilho noturno: $nightBrightnessLevel",
+      "translation": "夜晚亮度：$nightBrightnessLevel"
+    },
+    {
+      "source": "Desabilitado",
+      "translation": "已禁用"
+    },
+    {
+      "source": "Ativo",
+      "translation": "已启用"
+    },
+    {
+      "source": "Inativo",
+      "translation": "未启用"
+    },
+    {
+      "source": "Desconhecida",
+      "translation": "未知"
+    },
+    {
+      "source": "Score de Consistência da Viagem",
+      "translation": "行程一致评分"
+    },
+    {
+      "source": "Iniciar análise de viagem",
+      "translation": "开始行程分析"
+    },
+    {
+      "source": "Inicie uma viagem para acompanhar o score em tempo real. O cluster exibirá apenas um indicador discreto enquanto a análise estiver ativa.",
+      "translation": "开始行程即可实时查看评分。分析期间仪表只显示一个低调的指示标记。"
+    },
+    {
+      "source": "Aguardando telemetria para iniciar o score.",
+      "translation": "等待遥测数据后开始评分。"
+    },
+    {
+      "source": "Nenhuma viagem em análise",
+      "translation": "当前没有分析中的行程"
+    },
+    {
+      "source": "Nenhuma viagem finalizada ainda.",
+      "translation": "还没有已结束的行程。"
+    },
+    {
+      "source": "Histórico de viagens",
+      "translation": "行程历史"
+    },
+    {
+      "source": "Últimas ${reports.size}/10 viagens finalizadas.",
+      "translation": "最近 ${reports.size}/10 次已结束行程。"
+    },
+    {
+      "source": "O histórico mantém as últimas 10 viagens finalizadas.",
+      "translation": "历史记录最多保留最近 10 次行程。"
+    },
+    {
+      "source": "Relatório da viagem",
+      "translation": "行程报告"
+    },
+    {
+      "source": "Observações da viagem",
+      "translation": "行程备注"
+    },
+    {
+      "source": "Acel. fortes",
+      "translation": "急加速"
+    },
+    {
+      "source": "Paradas",
+      "translation": "停车"
+    },
+    {
+      "source": "Eventos",
+      "translation": "事件"
+    },
+    {
+      "source": "Distância",
+      "translation": "距离"
+    },
+    {
+      "source": "Duração",
+      "translation": "时长"
+    },
+    {
+      "source": "Continuar viagem",
+      "translation": "继续行程"
+    },
+    {
+      "source": "Você ainda está em viagem?",
+      "translation": "还在行程中吗？"
+    },
+    {
+      "source": "Se religar em até 12 horas, a viagem pode continuar sem perder dados.",
+      "translation": "12 小时内再次通电可继续行程，不会丢失数据。"
+    },
+    {
+      "source": "O veículo foi desligado durante uma análise ativa.",
+      "translation": "分析进行中车辆已断电。"
+    },
+    {
+      "source": "Viagem ativa fica salva se o veículo desligar.",
+      "translation": "车辆断电时，进行中的行程会自动保存。"
+    },
+    {
+      "source": "Encerrar viagem e gerar relatório",
+      "translation": "结束行程并生成报告"
+    },
+    {
+      "source": "Finalizar e gerar relatório",
+      "translation": "结束并生成报告"
+    },
+    {
+      "source": "Ver último relatório",
+      "translation": "查看最近报告"
+    },
+    {
+      "source": "Abrir",
+      "translation": "打开"
+    },
+    {
+      "source": "Ver depois",
+      "translation": "稍后"
+    },
+    {
+      "source": "Média",
+      "translation": "平均"
+    },
+    {
+      "source": "Apagar relatório",
+      "translation": "删除报告"
+    },
+    {
+      "source": "Persistência",
+      "translation": "持续保存"
+    },
+    {
+      "source": "Como funciona",
+      "translation": "原理说明"
+    },
+    {
+      "source": "Como funciona o score",
+      "translation": "评分原理"
+    },
+    {
+      "source": "Entender score",
+      "translation": "了解评分"
+    },
+    {
+      "source": "Dados usados",
+      "translation": "使用数据"
+    },
+    {
+      "source": "Velocidade, hodômetro e estado do veículo.",
+      "translation": "车速、里程和车辆状态。"
+    },
+    {
+      "source": "Consumo instantâneo de combustível e energia, quando disponíveis.",
+      "translation": "可用的瞬时油耗与能耗。"
+    },
+    {
+      "source": "Nível/corrente de regeneração para detectar eventos relevantes.",
+      "translation": "通过能量回收电平/电流识别相关事件。"
+    },
+    {
+      "source": "Regras implementadas usando dados reais já lidos pelo Impulse.",
+      "translation": "规则基于 Impulse 已读取的真实数据实现。"
+    },
+    {
+      "source": "Sem GPS: o score não usa rota, localização ou mapas.",
+      "translation": "不使用 GPS：评分不依赖路线、定位或地图。"
+    },
+    {
+      "source": "Pesos do score",
+      "translation": "评分权重"
+    },
+    {
+      "source": "Aceleração controlada",
+      "translation": "平顺加速"
+    },
+    {
+      "source": "Frenagem/regeneração",
+      "translation": "制动/能量回收"
+    },
+    {
+      "source": "Estabilidade",
+      "translation": "稳定性"
+    },
+    {
+      "source": "Variação de velocidade",
+      "translation": "速度变化"
+    },
+    {
+      "source": "Consumo",
+      "translation": "能耗"
+    },
+    {
+      "source": "Contexto de trânsito: 5%.",
+      "translation": "路况判断：5%。"
+    },
+    {
+      "source": "Variação de velocidade: 25%.",
+      "translation": "速度变化：25%。"
+    },
+    {
+      "source": "Aceleração controlada: 20%.",
+      "translation": "平顺加速：20%。"
+    },
+    {
+      "source": "Frenagem/regeneração: 20%.",
+      "translation": "制动/能量回收：20%。"
+    },
+    {
+      "source": "Estabilidade: 15%.",
+      "translation": "稳定性：15%。"
+    },
+    {
+      "source": "Consumo: 15%.",
+      "translation": "能耗：15%。"
+    },
+    {
+      "source": "Classificações",
+      "translation": "分级"
+    },
+    {
+      "source": "Viagem suave: score alto, poucas variações bruscas e condução previsível.",
+      "translation": "平稳行程：评分高、少急变、驾驶可预测。"
+    },
+    {
+      "source": "Viagem esportiva: várias acelerações/frenagens fortes ou muitas variações de velocidade.",
+      "translation": "运动行程：多次急加速/急刹车或大量速度波动。"
+    },
+    {
+      "source": "Trânsito pesado: baixa velocidade média, velocidade máxima baixa e padrão de anda-e-para.",
+      "translation": "拥堵路况：平均车速低、最高车速低且走走停停。"
+    },
+    {
+      "source": "VIAGEM\\nSUAVE",
+      "translation": "平稳\\n行程"
+    },
+    {
+      "source": "VIAGEM\\nESPORTIVA",
+      "translation": "运动\\n行程"
+    },
+    {
+      "source": "AGUARDANDO",
+      "translation": "等待中"
+    },
+    {
+      "source": "Avalia suavidade, estabilidade e eficiência usando a telemetria já monitorada pelo Impulse.",
+      "translation": "基于 Impulse 已监控的车辆遥测数据评估平顺性、稳定性和效率。"
+    },
+    {
+      "source": "${formatInstant(report.startedAt)} até ${formatInstant(report.endedAt)}",
+      "translation": "${formatInstant(report.startedAt)} 到 ${formatInstant(report.endedAt)}"
+    },
+    {
+      "source": "Definir volume ao ligar o veículo",
+      "translation": "车辆通电时设置音量"
+    },
+    {
+      "source": "Volume ao ligar o veículo",
+      "translation": "通电时音量"
+    },
+    {
+      "source": "Velocidade limite para fechar janelas",
+      "translation": "自动关窗速度阈值"
+    },
+    {
+      "source": "Velocidade limite para fechar teto solar",
+      "translation": "自动关天窗速度阈值"
+    },
+    {
+      "source": "Hora de início da noite",
+      "translation": "夜晚开始时间"
+    },
+    {
+      "source": "Minuto de início da noite",
+      "translation": "夜晚开始分钟"
+    },
+    {
+      "source": "Hora de fim da noite",
+      "translation": "夜晚结束时间"
+    },
+    {
+      "source": "Minuto de fim da noite",
+      "translation": "夜晚结束分钟"
+    },
+    {
+      "source": "Habilitar ajuste automático de brilho",
+      "translation": "启用自动亮度调节"
+    },
+    {
+      "source": "Nível de brilho automático à noite",
+      "translation": "夜间自动亮度"
+    },
+    {
+      "source": "Nível de brilho automático durante o dia",
+      "translation": "白天自动亮度"
+    },
+    {
+      "source": "Habilitar hooks do Frida",
+      "translation": "启用 Frida 钩子"
+    },
+    {
+      "source": "Habilitar hooks do Frida no System Server",
+      "translation": "在 System Server 中启用 Frida 钩子"
+    },
+    {
+      "source": "Habilitar projeção de dados no painel de instrumentos",
+      "translation": "在仪表盘投影数据"
+    },
+    {
+      "source": "Exibir odômetro no painel de instrumentos",
+      "translation": "在仪表盘显示里程"
+    },
+    {
+      "source": "Habilitar aviso de revisão no painel de instrumentos",
+      "translation": "在仪表盘显示保养提醒"
+    },
+    {
+      "source": "Exibir Odômetro e Aviso de Revisão no painel de instrumentos",
+      "translation": "在仪表盘显示里程与保养提醒"
+    },
+    {
+      "source": "Habilitar porcentagem da bateria EV no painel de instrumentos",
+      "translation": "在仪表盘显示 EV 电量百分比"
+    },
+    {
+      "source": "Habilitar integração personalizada de mídia no painel de instrumentos",
+      "translation": "在仪表盘显示自定义媒体信息"
+    },
+    {
+      "source": "Exibe um menu customizado no cluster controlado pelas teclas do volante",
+      "translation": "在仪表显示可用方向盘按键控制的自定义菜单"
+    },
+    {
+      "source": "Quilometragem para aviso de revisão no painel de instrumentos",
+      "translation": "仪表盘保养提醒里程"
+    },
+    {
+      "source": "Data da próxima revisão no painel de instrumentos",
+      "translation": "仪表盘下次保养日期"
+    },
+    {
+      "source": "Desativar AVAS (sistema de alerta de veículo silencioso)",
+      "translation": "禁用 AVAS（低速车辆警示音系统）"
+    },
+    {
+      "source": "Desativar camera AVM quando o carro está parado",
+      "translation": "车辆静止时关闭 AVM 相机"
+    },
+    {
+      "source": "Desativar navegador GPS nativo (Neusoft)",
+      "translation": "禁用原厂 Neusoft 导航"
+    },
+    {
+      "source": "Desativar assistente de voz nativo (iFlyTek)",
+      "translation": "禁用原厂 iFlyTek 语音助手"
+    },
+    {
+      "source": "Desativar serviço de previsão do tempo (OEM)",
+      "translation": "禁用原厂天气预报服务"
+    },
+    {
+      "source": "Propriedades do monitoramento do carro",
+      "translation": "车辆监控属性"
+    },
+    {
+      "source": "Ignorar verificação de integridade da instalação",
+      "translation": "跳过安装完整性校验"
+    },
+    {
+      "source": "Verificação de integridade da instalação",
+      "translation": "安装完整性校验"
+    },
+    {
+      "source": "Uso avançado",
+      "translation": "高级模式"
+    },
+    {
+      "source": "Usuário atual",
+      "translation": "当前用户"
+    },
+    {
+      "source": "Última configuração do ar-condicionado do cluster",
+      "translation": "仪表上次空调配置"
+    },
+    {
+      "source": "Desativar Bluetooth ao desligar o veículo",
+      "translation": "熄火时关闭蓝牙"
+    },
+    {
+      "source": "Desativar ponto de acesso ao desligar o veículo",
+      "translation": "熄火时关闭热点"
+    },
+    {
+      "source": "Estado do Bluetooth ao desligar o veículo",
+      "translation": "熄火时蓝牙状态"
+    },
+    {
+      "source": "Habilitar ventilação do banco do motorista ao ligar o ar-condicionado",
+      "translation": "开启空调时联动驾驶员座椅通风"
+    },
+    {
+      "source": "Habilitar botões personalizados no volante",
+      "translation": "启用方向盘自定义按键"
+    },
+    {
+      "source": "Habilitar barra inferior persistente (Android 9)",
+      "translation": "启用常驻底部快捷栏（Android 9）"
+    },
+    {
+      "source": "Ação do botão personalizado 1 do volante",
+      "translation": "方向盘自定义按键 1 动作"
+    },
+    {
+      "source": "Ação do botão personalizado 2 do volante",
+      "translation": "方向盘自定义按键 2 动作"
+    },
+    {
+      "source": "Ação original do botão personalizado 1 do volante",
+      "translation": "方向盘自定义按键 1 原始动作"
+    },
+    {
+      "source": "Ação original do botão personalizado 2 do volante",
+      "translation": "方向盘自定义按键 2 原始动作"
+    },
+    {
+      "source": "Pacote do aplicativo para o botão personalizado 1 do volante",
+      "translation": "方向盘自定义按键 1 打开的应用包名"
+    },
+    {
+      "source": "Pacote do aplicativo para o botão personalizado 2 do volante",
+      "translation": "方向盘自定义按键 2 打开的应用包名"
+    },
+    {
+      "source": "Ação do botão personalizado 1 do volante (toque duplo)",
+      "translation": "方向盘自定义按键 1 动作（双击）"
+    },
+    {
+      "source": "Ação do botão personalizado 2 do volante (toque duplo)",
+      "translation": "方向盘自定义按键 2 动作（双击）"
+    },
+    {
+      "source": "Ação do botão personalizado 1 do volante (toque longo)",
+      "translation": "方向盘自定义按键 1 动作（长按）"
+    },
+    {
+      "source": "Ação do botão personalizado 2 do volante (toque longo)",
+      "translation": "方向盘自定义按键 2 动作（长按）"
+    },
+    {
+      "source": "Pacote do app para o botão 1 do volante (toque duplo)",
+      "translation": "方向盘按键 1 打开的应用包名（双击）"
+    },
+    {
+      "source": "Pacote do app para o botão 2 do volante (toque duplo)",
+      "translation": "方向盘按键 2 打开的应用包名（双击）"
+    },
+    {
+      "source": "Pacote do app para o botão 1 do volante (toque longo)",
+      "translation": "方向盘按键 1 打开的应用包名（长按）"
+    },
+    {
+      "source": "Pacote do app para o botão 2 do volante (toque longo)",
+      "translation": "方向盘按键 2 打开的应用包名（长按）"
+    },
+    {
+      "source": "Comando do ar-condicionado para o botão personalizado 1 do volante",
+      "translation": "方向盘自定义按键 1 空调指令"
+    },
+    {
+      "source": "Comando do ar-condicionado para o botão personalizado 2 do volante",
+      "translation": "方向盘自定义按键 2 空调指令"
+    },
+    {
+      "source": "Última tela exibida no cluster",
+      "translation": "仪表上次显示的屏幕"
+    },
+    {
+      "source": "Último item selecionado no menu principal do cluster",
+      "translation": "仪表主菜单上次选中的项"
+    },
+    {
+      "source": "Habilitar A/C no máximo ao ligar o veículo se temperatura acima do configurado",
+      "translation": "车辆通电且温度高于阈值时启用 Max AC"
+    },
+    {
+      "source": "Temperatura limite para ativar Max AC ao destravar",
+      "translation": "触发 Max AC 的温度阈值"
+    },
+    {
+      "source": "Temperatura alvo para o Max AC",
+      "translation": "Max AC 目标温度"
+    },
+    {
+      "source": "Tempo limite para desativar o Max AC (em minutos)",
+      "translation": "Max AC 自动关闭时长（分钟）"
+    },
+    {
+      "source": "Habilitar abertura da cortina do teto solar ao ligar",
+      "translation": "通电时自动打开天窗遮阳帘"
+    },
+    {
+      "source": "Abre automaticamente a cortina do teto solar ao ligar o veículo",
+      "translation": "车辆通电时自动打开天窗遮阳帘"
+    },
+    {
+      "source": "Hora de início para abrir cortina",
+      "translation": "打开遮阳帘开始时间"
+    },
+    {
+      "source": "Minuto de início para abrir cortina",
+      "translation": "打开遮阳帘开始分钟"
+    },
+    {
+      "source": "Hora fim para abrir cortina",
+      "translation": "打开遮阳帘结束时间"
+    },
+    {
+      "source": "Minuto fim para abrir cortina",
+      "translation": "打开遮阳帘结束分钟"
+    },
+    {
+      "source": "Temperatura externa máxima para abrir cortina",
+      "translation": "打开遮阳帘的室外最高温度"
+    },
+    {
+      "source": "Versão alvo para resetar dados ao voltar para canal estável",
+      "translation": "返回稳定通道时的数据重置目标版本"
+    },
+    {
+      "source": "Mostrar atualizações do canal beta",
+      "translation": "显示测试版通道更新"
+    },
+    {
+      "source": "Configurações de apps para telas secundárias",
+      "translation": "副屏应用配置"
+    },
+    {
+      "source": "Habilitar Virtual Cluster no painel de instrumentos",
+      "translation": "在仪表盘启用虚拟仪表"
+    },
+    {
+      "source": "ID da tela para o Virtual Cluster (Fixado em 3)",
+      "translation": "虚拟仪表屏幕 ID（固定为 3）"
+    },
+    {
+      "source": "Template atual do cluster",
+      "translation": "当前仪表模板"
+    },
+    {
+      "source": "Modo de exibição do cluster",
+      "translation": "仪表显示模式"
+    },
+    {
+      "source": "Pacote do app padrão para abrir no cluster",
+      "translation": "仪表启动时默认打开的应用包名"
+    },
+    {
+      "source": "Histórico de revisões realizadas",
+      "translation": "已完成保养历史"
+    },
+    {
+      "source": "Tema do Virtual Cluster",
+      "translation": "虚拟仪表主题"
+    },
+    {
+      "source": "Modo Noturno do Virtual Cluster",
+      "translation": "虚拟仪表夜间模式"
+    },
+    {
+      "source": "Unidade de exibição do combustível no cluster",
+      "translation": "仪表燃油显示单位"
+    },
+    {
+      "source": "Ajuste de margem inferior para a barra (overscan)",
+      "translation": "底栏底部留白调整（overscan）"
+    },
+    {
+      "source": "URL do Repositório de Temas (Prod)",
+      "translation": "主题仓库地址（正式）"
+    },
+    {
+      "source": "URL do Repositório de Temas (Dev)",
+      "translation": "主题仓库地址（开发）"
+    },
+    {
+      "source": "Ambiente do Repositório (Prod/Dev)",
+      "translation": "主题仓库环境（正式/开发）"
+    },
+    {
+      "source": "Tema Dinâmico Ativo",
+      "translation": "当前动态主题"
+    },
+    {
+      "source": "Esconder barra automaticamente após 30s",
+      "translation": "30 秒无操作后自动隐藏底栏"
+    },
+    {
+      "source": "Overrides de aplicativos salvos (JSON)",
+      "translation": "已保存应用覆盖配置（JSON）"
+    },
+    {
+      "source": "Habilitar ajuste de velocidade no painel",
+      "translation": "在仪表启用车速校准"
+    },
+    {
+      "source": "Fator de ajuste de velocidade (%)",
+      "translation": "车速校准系数（%）"
+    },
+    {
+      "source": "Indicador discreto de análise de viagem ativa no cluster",
+      "translation": "在仪表显示低调的行程分析指示"
+    },
+    {
+      "source": "Score de consistência em tempo real no cluster",
+      "translation": "在仪表实时显示一致性评分"
+    }
+  ],
+  "substring": [
+    {
+      "source": "Próxima Manutenção em: ",
+      "translation": "下次保养："
+    },
+    {
+      "source": "Odômetro:",
+      "translation": "里程："
+    },
+    {
+      "source": "Saída:",
+      "translation": "输出："
+    },
+    {
+      "source": "Nome original",
+      "translation": "原始名称"
+    },
+    {
+      "source": "Ajuste Real-time: ",
+      "translation": "实时调整："
+    }
+  ],
+  "theme": [
+    {
+      "source": "Fan",
+      "translation": "风量"
+    },
+    {
+      "source": "Temp",
+      "translation": "温度"
+    },
+    {
+      "source": "AUTO",
+      "translation": "自动"
+    },
+    {
+      "source": "MAX AUTO ON",
+      "translation": "最大自动"
+    },
+    {
+      "source": "Outside",
+      "translation": "室外"
+    },
+    {
+      "source": "Inside",
+      "translation": "车内"
+    },
+    {
+      "source": "Low",
+      "translation": "最低"
+    },
+    {
+      "source": "High",
+      "translation": "最高"
+    },
+    {
+      "source": "HI",
+      "translation": "高"
+    },
+    {
+      "source": "LO",
+      "translation": "低"
+    },
+    {
+      "source": "IMPULSE AUTO",
+      "translation": "智能自动"
+    }
+  ],
+  "cluster": [
+    {
+      "source": "Modo",
+      "translation": "模式"
+    },
+    {
+      "source": "Gráficos",
+      "translation": "图表"
+    },
+    {
+      "source": "Regeneração",
+      "translation": "能量回收"
+    },
+    {
+      "source": "Display",
+      "translation": "显示模式"
+    },
+    {
+      "source": "Modo HEV",
+      "translation": "HEV 模式"
+    },
+    {
+      "source": "Prior. EV",
+      "translation": "EV 优先"
+    },
+    {
+      "source": "Modo EV",
+      "translation": "EV 模式"
+    },
+    {
+      "source": "Potência EV",
+      "translation": "EV 功率"
+    },
+    {
+      "source": "Média",
+      "translation": "平均"
+    },
+    {
+      "source": "Consumo Misto",
+      "translation": "综合能耗"
+    },
+    {
+      "source": "Consumo Elétrico",
+      "translation": "电耗"
+    },
+    {
+      "source": "Consumo Instantâneo",
+      "translation": "瞬时油耗"
+    },
+    {
+      "source": "Média EV",
+      "translation": "EV 平均"
+    },
+    {
+      "source": "Velocidade",
+      "translation": "车速"
+    },
+    {
+      "source": "Consumo",
+      "translation": "能耗"
+    },
+    {
+      "source": "Modos do Tema",
+      "translation": "主题模式"
+    },
+    {
+      "source": "O cockpit virtual precisa ser ativado no app Haval Impulse.",
+      "translation": "需要在 Haval Impulse 应用中启用虚拟仪表。"
+    },
+    {
+      "source": "Normal",
+      "translation": "标准"
+    },
+    {
+      "source": "Reduzido",
+      "translation": "精简"
+    },
+    {
+      "source": "Clean",
+      "translation": "简洁"
+    },
+    {
+      "source": "Esportivo Clean",
+      "translation": "运动简洁"
+    },
+    {
+      "source": "External",
+      "translation": "室外"
+    },
+    {
+      "source": "Internal",
+      "translation": "车内"
+    },
+    {
+      "source": "WARN",
+      "translation": "警示"
+    },
+    {
+      "source": "SCORE",
+      "translation": "评分"
+    },
+    {
+      "source": "ODO ",
+      "translation": "里程 "
+    },
+    {
+      "source": "Long press ",
+      "translation": "长按 "
+    },
+    {
+      "source": " toggles One-Pedal",
+      "translation": "切换单踏板"
+    },
+    {
+      "source": "One-Pedal",
+      "translation": "单踏板"
+    },
+    {
+      "source": "Regen Power",
+      "translation": "能量回收功率"
+    },
+    {
+      "source": "ALTO",
+      "translation": "高"
+    },
+    {
+      "source": "NORMAL",
+      "translation": "正常"
+    },
+    {
+      "source": "BAIXO",
+      "translation": "低"
+    }
+  ]
+}

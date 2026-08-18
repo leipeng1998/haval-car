@@ -5,10 +5,17 @@ on:
     branches: [master, preview]
   workflow_dispatch:
     inputs:
+      build_type:
+        description: 'Build type: debug (no signing secrets required) or release (requires signing secrets)'
+        type: choice
+        options:
+          - debug
+          - release
+        default: debug
       version:
-        description: 'Release version (e.g., 1.0.0)'
-        required: true
-        default: '1.0.0'
+        description: 'Version (e.g., 1.0.0). Leave empty to auto-increment from v2.* tags.'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -27,51 +34,39 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Decode Keystore
-        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > app/release.keystore
-
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
       - name: Get latest version and increment
         id: version
         run: |
-          git fetch --tags --force
-
           BRANCH_NAME="${GITHUB_REF_NAME:-${GITHUB_REF##*/}}"
 
-          if [ "$BRANCH_NAME" = "preview" ]; then
-            LATEST_TAG=$(git tag --list "v*-preview" --sort=-v:refname | head -n1)
-            if [ -z "$LATEST_TAG" ]; then
-              BASE_VERSION="1.0.0.-1-preview"
+          INPUT_VERSION="${{ github.event.inputs.version }}"
+          if [ -n "$INPUT_VERSION" ]; then
+            NEW_SEMVER="$INPUT_VERSION"
+          else
+            LATEST=$(git tag --list "v2.*" --sort=-v:refname | grep -vi -- '-preview' | head -n1)
+            if [ -z "$LATEST" ]; then
+              NEW_SEMVER="2.0.0"
             else
-              BASE_VERSION="${LATEST_TAG#v}"
+              MAJOR_MINOR=$(echo "$LATEST" | grep -oP 'v\K\d+\.\d+')
+              PATCH=$(echo "$LATEST" | grep -oP 'v\d+\.\d+\.\K\d+')
+              NEW_SEMVER="${MAJOR_MINOR}.$((PATCH + 1))"
             fi
-            VERSION_BASE="${BASE_VERSION%-preview}"
-            IFS='.' read -r -a PARTS <<< "$VERSION_BASE"
-          else
-            LATEST_TAG=$(git tag --list "v[0-9]*.[0-9]*.[0-9]*.[0-9]*" --sort=-v:refname | head -n1)
-            if [ -z "$LATEST_TAG" ]; then
-              LATEST_TAG="v1.0.0.-1"
-            fi
-            VERSION="${LATEST_TAG#v}"
-            IFS='.' read -r -a PARTS <<< "$VERSION"
           fi
-
-          BUILD=${PARTS[3]:--1}
-          BUILD=$((BUILD + 1))
-
-          NEW_VERSION_BASE="${PARTS[0]:-1}.${PARTS[1]:-0}.${PARTS[2]:-0}.$BUILD"
 
           if [ "$BRANCH_NAME" = "preview" ]; then
-            NEW_VERSION="${NEW_VERSION_BASE}-preview"
+            NEW_VERSION="${NEW_SEMVER}-preview"
           else
-            NEW_VERSION="$NEW_VERSION_BASE"
+            NEW_VERSION="$NEW_SEMVER"
           fi
-
           echo "new_version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
 
-          NEW_VERSION_CODE=$((BUILD + 1))
+          MA=$(echo "$NEW_SEMVER" | cut -d. -f1)
+          MI=$(echo "$NEW_SEMVER" | cut -d. -f2)
+          PA=$(echo "$NEW_SEMVER" | cut -d. -f3)
+          NEW_VERSION_CODE=$(( MA * 10000 + MI * 100 + PA ))
           echo "new_version_code=$NEW_VERSION_CODE" >> "$GITHUB_OUTPUT"
 
       - name: Update build.gradle.kts
@@ -79,14 +74,50 @@ jobs:
           sed -i "s/versionName = \".*\"/versionName = \"${{ steps.version.outputs.new_version }}\"/" app/build.gradle.kts
           sed -i "s/versionCode = [0-9]*/versionCode = ${{ steps.version.outputs.new_version_code }}/" app/build.gradle.kts
 
-      - name: Build with Gradle
+      - name: Build debug APK
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.build_type == 'debug'
+        run: ./gradlew assembleDebug
+
+      - name: Check release keystore secrets
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.build_type == 'release'
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        run: |
+          if [ -z "$KEYSTORE_BASE64" ]; then
+            echo "::error::Missing KEYSTORE_BASE64 secret. Add it before running a release build."
+            exit 1
+          fi
+
+      - name: Decode Keystore
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.build_type == 'release'
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        run: echo "$KEYSTORE_BASE64" | base64 -d > app/release.keystore
+
+      - name: Build release APK
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.build_type == 'release'
         env:
           SIGNING_STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
           SIGNING_KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           SIGNING_KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: ./gradlew assembleRelease
 
+      - name: Upload debug APK
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.build_type == 'debug'
+        uses: actions/upload-artifact@v4
+        with:
+          name: haval-h6-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Upload release APK
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.build_type == 'release'
+        uses: actions/upload-artifact@v4
+        with:
+          name: haval-h6-release-apk
+          path: app/build/outputs/apk/release/app-release.apk
+
       - name: Create Release
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.build_type == 'release'
         run: |
           BRANCH_NAME="${GITHUB_REF_NAME:-${GITHUB_REF##*/}}"
           EXTRA_FLAGS=""
@@ -102,6 +133,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload APK to release
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.build_type == 'release'
         run: |
           gh release upload v${{ steps.version.outputs.new_version }} app/build/outputs/apk/release/app-release.apk
         env:

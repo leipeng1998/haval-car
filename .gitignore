@@ -1,6 +1,8 @@
 # Gradle files
 .gradle/
 build/
+DOCS/
+tools/headunit-dev/output/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -35,3 +37,17 @@ google-services.json
 
 .DS_Store
 REFACTORING_SUMMARY.md
+.agents/
+
+# Local research / recovery / build scratch (do not push)
+.research/
+_diag/
+_fresh/
+_restore/
+_tmp_verify/
+*.tar.gz
+gradle_error.txt
+qrcode.png
+haval-h6-hvac-research.md
+fork/
+haval-h6-hvac-research.md
